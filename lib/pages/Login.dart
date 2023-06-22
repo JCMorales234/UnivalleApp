@@ -14,16 +14,11 @@ class _loginState extends State<login> {
   Widget build(BuildContext context) {
     return Container(
       child: Scaffold(
+        backgroundColor: Color.fromARGB(192, 255, 6, 6),
         body: Container(
           padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 90.0),
           width: double.infinity,
           height: double.infinity,
-          decoration: const BoxDecoration(
-              gradient: LinearGradient(colors: <Color>[
-            Color.fromARGB(249, 226, 27, 27),
-            Color.fromARGB(230, 223, 11, 11),
-            Color.fromARGB(239, 206, 6, 6),
-          ], begin: Alignment.topCenter)),
           child: ListView(
             padding: const EdgeInsets.symmetric(horizontal: 40.0, vertical: 0),
             children: <Widget>[
@@ -32,7 +27,7 @@ class _loginState extends State<login> {
                 children: [
                   CircleAvatar(
                     radius: 100.0,
-                    backgroundColor: Colors.white,
+                    backgroundColor: Color.fromARGB(0, 255, 255, 255),
                     backgroundImage: AssetImage("images/Logo_Univalle.png"),
                   ),
                   Text(

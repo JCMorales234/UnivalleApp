@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/pages/Calendario_menu.dart';
 import 'package:myapp/pages/Login.dart';
+import 'package:myapp/pages/Menu_Deportes.dart';
 
 class MenuPrincipal extends StatefulWidget {
   const MenuPrincipal({super.key});
@@ -13,7 +14,7 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(226, 255, 6, 6),
+      backgroundColor: Color.fromARGB(192, 255, 6, 6),
       body: GridView.count(
         crossAxisSpacing: 1,
         mainAxisSpacing: 2,
@@ -22,6 +23,7 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
         children: <Widget>[
           CircleAvatar(
             backgroundImage: AssetImage("images/Logo_Univalle.png"),
+            backgroundColor: Color.fromARGB(0, 255, 6, 6),
           ),
           TextButton.icon(
               onPressed: () {
@@ -57,7 +59,10 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
                 ),
               )),
           TextButton.icon(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MenuDeportes()));
+              },
               icon: Icon(
                 Icons.sports_gymnastics_sharp,
                 color: Colors.white,
