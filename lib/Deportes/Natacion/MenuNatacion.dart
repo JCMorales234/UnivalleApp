@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Deportes/Baloncesto/RutinaBaloncesto.dart';
+import 'package:myapp/Deportes/Natacion/RutinaNatacion.dart';
 
-class MenuBaloncesto extends StatelessWidget {
-  const MenuBaloncesto({super.key});
+class MenuNatacion extends StatelessWidget {
+  const MenuNatacion({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(123, 255, 25, 25),
       appBar: AppBar(
-        title: Text("Baloncesto 🏀"),
+        title: Text("Natación 🏊"),
         centerTitle: true,
         backgroundColor: Color.fromARGB(122, 196, 18, 18),
       ),
@@ -20,14 +20,14 @@ class MenuBaloncesto extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                "images/Basquet1.jpeg",
+                "images/Natacion.jpeg",
                 width: 2000.0,
               ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 10.0),
               ),
               Text(
-                "Para jugar baloncesto se requiere de mucha resistencia y fuerza asi que tener las aptitudes fisicas es fundamental para aguantar un partido de baloncesto, Pero ademas es importante tener una buena tecnica y entender los fundamentos del juego.",
+                "La natación dentro del marco de la Educación Física y el Deporte constituye una fuente muy valiosa para lograr el desarrollo integral del ser humano. Por esta razón los especialistas buscan la forma más eficiente de lograr que los participantes dominen la técnica que se desarrolla en un medio diferente al del habitual del hombre. Por lo que surge la formación básica con sus 5 cualidades, las cuales son: Sumersión, Saltos, Respiración, Flotación, Locomoción.",
                 style: TextStyle(
                   fontSize: 20.0,
                   color: Color.fromARGB(255, 255, 255, 255),
@@ -38,7 +38,7 @@ class MenuBaloncesto extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 10.0),
               ),
               Text(
-                "Teniendo en cuenta todo lo mencionado anteriormente he preparado una rutina basica de entrenamiento de baloncesto 😊",
+                "Teniendo en cuenta todo lo mencionado anteriormente he preparado una rutina basica de entrenamiento de Natación 😊",
                 style: TextStyle(
                   fontSize: 20.0,
                   color: Color.fromARGB(255, 255, 255, 255),
@@ -49,7 +49,7 @@ class MenuBaloncesto extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 10.0),
               ),
               Text(
-                "La rutina consta de 3 fases: \n\n Fase 1: Calentamiento \n - Trotar Lentamente por la cancha durante 5 mins \n - Realizar un estiramiento de brazos, piernas, espalda y rodillas \n - 3  ''Suicidios'' \n\n Fase 2: Entrenamiento Principal: \n - dribla el balón, tira a canasta y realiza diversos ejercicios. Esto realmente no tiene una estructura, es simplemente entrar en confianza con la pelota y sentirte despejado física y mentalmente. \n - 30 tiros libres desde diferentes posiciones \n - Dribleo entre conos durante 10 minutos \n - Pases contra la pared 10 minutos \n - Salta la cuerda 10 minutos \n\n Fase 3: Enfriamiento \n - Lanza tiros libres 5 mins \n -Trota lentamente 5 mins \n -Estiramiento de brazos, piernas, espalda y rodillas \n\n Si no sabes como realizar algun ejercicio mencionado anteriormente, pulsa el boton para ver una guia de los ejerccios ",
+                "La rutina es la siguiente: \n\n Calentamiento  \n - 200 metros en estilo libre a un ritmo moderado para empezar a estirar los músculos. \n\n Entrenamiento principal \n - Brazos de crol (sujetando un pull-over entre las piernas): 3 series de 100 metros. \n - Piernas de crol (con brazos en tabla): 3 series de 100 metros \n - Piernas de crol y un brazo (se mantiene el brazo derecho extendido): 3 series de 100 metros \n - Piernas de crol y un brazo (se mantiene el brazo izquierdo extendido): 3 series de 100 metros. \n - Crol completo: 4 series de 100 metros a ritmo alto. \n	1 serie de 200 metros en estilo libre y a ritmo lento para estirar los músculos. \n\n Si no sabes como realizar algun ejercicio mencionado anteriormente, pulsa el boton para ver una guia de los ejerccios ",
                 style: TextStyle(
                   fontSize: 20.0,
                   color: Color.fromARGB(255, 255, 255, 255),
@@ -64,7 +64,7 @@ class MenuBaloncesto extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => RutinaBaloncesto()));
+                          builder: (context) => RutinaNatacion()));
                 },
                 style: ButtonStyle(
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(

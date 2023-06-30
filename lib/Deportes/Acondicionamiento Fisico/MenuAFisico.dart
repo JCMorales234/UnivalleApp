@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Deportes/Baloncesto/RutinaBaloncesto.dart';
+import 'package:myapp/Deportes/Acondicionamiento%20Fisico/RutinaAfisico.dart';
+import 'package:myapp/Deportes/Voleibol/RutinaVoleibol.dart';
 
-class MenuBaloncesto extends StatelessWidget {
-  const MenuBaloncesto({super.key});
+class MenuAfisico extends StatelessWidget {
+  const MenuAfisico({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(123, 255, 25, 25),
       appBar: AppBar(
-        title: Text("Baloncesto 🏀"),
+        title: Text("Acondicionamiento fisico 💪"),
         centerTitle: true,
         backgroundColor: Color.fromARGB(122, 196, 18, 18),
       ),
@@ -20,14 +21,14 @@ class MenuBaloncesto extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                "images/Basquet1.jpeg",
+                "images/AFisico.jpg",
                 width: 2000.0,
               ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 10.0),
               ),
               Text(
-                "Para jugar baloncesto se requiere de mucha resistencia y fuerza asi que tener las aptitudes fisicas es fundamental para aguantar un partido de baloncesto, Pero ademas es importante tener una buena tecnica y entender los fundamentos del juego.",
+                "Estar en buena forma no solo es importante para los deportes, tener un buen estado fisico nos garantiza evitar problemas de salud y nos genera un sentimiento de bienestar importante para poder afrontar todos los dias con una buena actitud",
                 style: TextStyle(
                   fontSize: 20.0,
                   color: Color.fromARGB(255, 255, 255, 255),
@@ -38,7 +39,7 @@ class MenuBaloncesto extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 10.0),
               ),
               Text(
-                "Teniendo en cuenta todo lo mencionado anteriormente he preparado una rutina basica de entrenamiento de baloncesto 😊",
+                "Teniendo en cuenta todo lo mencionado anteriormente he preparado una rutina basica para el Acondicionamiento fisico 😊",
                 style: TextStyle(
                   fontSize: 20.0,
                   color: Color.fromARGB(255, 255, 255, 255),
@@ -49,7 +50,7 @@ class MenuBaloncesto extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 10.0),
               ),
               Text(
-                "La rutina consta de 3 fases: \n\n Fase 1: Calentamiento \n - Trotar Lentamente por la cancha durante 5 mins \n - Realizar un estiramiento de brazos, piernas, espalda y rodillas \n - 3  ''Suicidios'' \n\n Fase 2: Entrenamiento Principal: \n - dribla el balón, tira a canasta y realiza diversos ejercicios. Esto realmente no tiene una estructura, es simplemente entrar en confianza con la pelota y sentirte despejado física y mentalmente. \n - 30 tiros libres desde diferentes posiciones \n - Dribleo entre conos durante 10 minutos \n - Pases contra la pared 10 minutos \n - Salta la cuerda 10 minutos \n\n Fase 3: Enfriamiento \n - Lanza tiros libres 5 mins \n -Trota lentamente 5 mins \n -Estiramiento de brazos, piernas, espalda y rodillas \n\n Si no sabes como realizar algun ejercicio mencionado anteriormente, pulsa el boton para ver una guia de los ejerccios ",
+                "La rutina consta de 3 fases: \n\n Fase 1: Calentamiento  \n - Realizar un estiramiento de brazos, piernas, rodillas, pies y cuello \n - Trotar lentamente 5 minutos \n\n Fase 2: Entrenamiento principal \n - Saltos de tijera 5 series de 50 repeticiones \n - abdominales 5 series de 50 repeticiones \n - Elevamiento de rodillas 5 series de 50 repeticiones \n Flexiones 5 series 10 repeticiones \n Salta la cuerda 5 mins  \n\n  Fase 3: Estiramiento \n - Realizar un estiramiento de brazos, piernas, rodillas, pies y cuello \n\n Si no sabes como realizar algun ejercicio mencionado anteriormente, pulsa el boton para ver una guia de los ejerccios ",
                 style: TextStyle(
                   fontSize: 20.0,
                   color: Color.fromARGB(255, 255, 255, 255),
@@ -61,10 +62,8 @@ class MenuBaloncesto extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => RutinaBaloncesto()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => RutinaAFisico()));
                 },
                 style: ButtonStyle(
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(

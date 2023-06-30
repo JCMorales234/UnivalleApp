@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/Deportes/Acondicionamiento%20Fisico/MenuAFisico.dart';
+import 'package:myapp/Deportes/Futbol%20Sala/MenuFutbolSala.dart';
+import 'package:myapp/Deportes/Futbol/MenuFutbol.dart';
+import 'package:myapp/Deportes/Natacion/MenuNatacion.dart';
+import 'package:myapp/Deportes/Voleibol/MenuVoleibol.dart';
 import 'package:myapp/iconos_app_icons.dart';
 import 'package:myapp/pages/Calendario_menu.dart';
 import 'package:myapp/pages/Login.dart';
@@ -23,10 +28,13 @@ class _MenuDeportesState extends State<MenuDeportes> {
         crossAxisCount: 2,
         padding: EdgeInsets.all(10),
         children: <Widget>[
+//
+// Acondicionamiento fisico
+//
           TextButton.icon(
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => MenuBaloncesto()));
+                    MaterialPageRoute(builder: (context) => MenuAfisico()));
               },
               icon: Icon(
                 Icons.sports,
@@ -36,11 +44,14 @@ class _MenuDeportesState extends State<MenuDeportes> {
               label: Text(
                 "Acondicionamiento Fisico",
                 style: TextStyle(
-                  fontSize: 28.0,
+                  fontSize: 20.0,
                   color: Color.fromARGB(255, 255, 255, 255),
                   fontFamily: "Oswald",
                 ),
               )),
+//
+// Ajedrez
+//
           TextButton.icon(
               onPressed: () {},
               icon: Icon(
@@ -51,11 +62,15 @@ class _MenuDeportesState extends State<MenuDeportes> {
               label: Text(
                 "Ajedrez",
                 style: TextStyle(
-                  fontSize: 35.0,
+                  fontSize: 25.0,
                   color: Color.fromARGB(255, 255, 255, 255),
                   fontFamily: "Oswald",
                 ),
               )),
+
+//
+// Baloncesto
+//
           TextButton.icon(
               onPressed: () {
                 Navigator.push(context,
@@ -69,13 +84,20 @@ class _MenuDeportesState extends State<MenuDeportes> {
               label: Text(
                 "Baloncesto",
                 style: TextStyle(
-                  fontSize: 35.0,
+                  fontSize: 25.0,
                   color: Color.fromARGB(255, 255, 255, 255),
                   fontFamily: "Oswald",
                 ),
               )),
+
+//
+// Futbol
+//
           TextButton.icon(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MenuFutbol()));
+              },
               icon: Icon(
                 Icons.sports_soccer,
                 color: Colors.white,
@@ -84,13 +106,20 @@ class _MenuDeportesState extends State<MenuDeportes> {
               label: Text(
                 "Futbol",
                 style: TextStyle(
-                  fontSize: 35.0,
+                  fontSize: 25.0,
                   color: Color.fromARGB(255, 255, 255, 255),
                   fontFamily: "Oswald",
                 ),
               )),
+
+//
+// futbol sala
+//
           TextButton.icon(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MenuFutbolSala()));
+              },
               icon: Icon(
                 Icons.sports_soccer_rounded,
                 color: Colors.white,
@@ -99,13 +128,20 @@ class _MenuDeportesState extends State<MenuDeportes> {
               label: Text(
                 "Futbol Sala",
                 style: TextStyle(
-                  fontSize: 35.0,
+                  fontSize: 25.0,
                   color: Color.fromARGB(255, 255, 255, 255),
                   fontFamily: "Oswald",
                 ),
               )),
+
+//
+// Natacion
+//
           TextButton.icon(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MenuNatacion()));
+              },
               icon: Icon(
                 IconosApp.swimming,
                 color: Colors.white,
@@ -114,11 +150,15 @@ class _MenuDeportesState extends State<MenuDeportes> {
               label: Text(
                 "Natacion",
                 style: TextStyle(
-                  fontSize: 35.0,
+                  fontSize: 25.0,
                   color: Color.fromARGB(255, 255, 255, 255),
                   fontFamily: "Oswald",
                 ),
               )),
+
+//
+// tenis de mesa
+//
           TextButton.icon(
               onPressed: () {},
               icon: Icon(
@@ -129,11 +169,16 @@ class _MenuDeportesState extends State<MenuDeportes> {
               label: Text(
                 "Tenis de mesa",
                 style: TextStyle(
-                  fontSize: 35.0,
+                  fontSize: 25.0,
                   color: Color.fromARGB(255, 255, 255, 255),
                   fontFamily: "Oswald",
                 ),
               )),
+
+//
+// Ultimate
+//
+
           TextButton.icon(
               onPressed: () {},
               icon: Icon(
@@ -144,13 +189,20 @@ class _MenuDeportesState extends State<MenuDeportes> {
               label: Text(
                 "Ultimate",
                 style: TextStyle(
-                  fontSize: 35.0,
+                  fontSize: 25.0,
                   color: Color.fromARGB(255, 255, 255, 255),
                   fontFamily: "Oswald",
                 ),
               )),
+
+//
+// Voleibol
+//
           TextButton.icon(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MenuVoleibol()));
+              },
               icon: Icon(
                 Icons.sports_volleyball,
                 color: Colors.white,
@@ -159,11 +211,15 @@ class _MenuDeportesState extends State<MenuDeportes> {
               label: Text(
                 "Voleibol",
                 style: TextStyle(
-                  fontSize: 35.0,
+                  fontSize: 25.0,
                   color: Color.fromARGB(255, 255, 255, 255),
                   fontFamily: "Oswald",
                 ),
               )),
+
+//
+// Boton volver
+//
           TextButton.icon(
               onPressed: () {
                 Navigator.push(context,
@@ -177,7 +233,7 @@ class _MenuDeportesState extends State<MenuDeportes> {
               label: Text(
                 "Volver al Menu principal",
                 style: TextStyle(
-                  fontSize: 30.0,
+                  fontSize: 20.0,
                   color: Color.fromARGB(255, 255, 255, 255),
                   fontFamily: "Oswald",
                 ),

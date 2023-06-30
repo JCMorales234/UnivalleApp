@@ -1,4 +1,6 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:myapp/Estudio/PomodoroAPP/Pomodoro.dart';
 import 'package:myapp/pages/Calendario_menu.dart';
 import 'package:myapp/pages/Login.dart';
 import 'package:myapp/pages/Menu_Deportes.dart';
@@ -16,7 +18,7 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
     return Scaffold(
       backgroundColor: Color.fromARGB(192, 255, 6, 6),
       body: GridView.count(
-        crossAxisSpacing: 1,
+        crossAxisSpacing: 2,
         mainAxisSpacing: 2,
         crossAxisCount: 2,
         padding: EdgeInsets.all(10),
@@ -25,6 +27,10 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
             backgroundImage: AssetImage("images/Logo_Univalle.png"),
             backgroundColor: Color.fromARGB(0, 255, 6, 6),
           ),
+
+//
+// Calendario
+//
           TextButton.icon(
               onPressed: () {
                 Navigator.push(context,
@@ -38,26 +44,35 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
               label: Text(
                 "Calendario",
                 style: TextStyle(
-                  fontSize: 35.0,
+                  fontSize: 25.0,
                   color: Color.fromARGB(255, 255, 255, 255),
                   fontFamily: "Oswald",
                 ),
               )),
+//
+// Estudio
+//
           TextButton.icon(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Pomodoro()));
+              },
               icon: Icon(
-                Icons.timer,
+                Icons.menu_book,
                 color: Colors.white,
                 size: 40.0,
               ),
               label: Text(
-                "Pomodoro",
+                "Estudio",
                 style: TextStyle(
-                  fontSize: 35.0,
+                  fontSize: 25.0,
                   color: Color.fromARGB(255, 255, 255, 255),
                   fontFamily: "Oswald",
                 ),
               )),
+//
+// Deportes
+//
           TextButton.icon(
               onPressed: () {
                 Navigator.push(context,
@@ -71,11 +86,14 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
               label: Text(
                 "Deportes",
                 style: TextStyle(
-                  fontSize: 35.0,
+                  fontSize: 25.0,
                   color: Color.fromARGB(255, 255, 255, 255),
                   fontFamily: "Oswald",
                 ),
               )),
+//
+// Calendario
+//
           TextButton.icon(
               onPressed: () {},
               icon: Icon(
@@ -86,11 +104,15 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
               label: Text(
                 "Perfil",
                 style: TextStyle(
-                  fontSize: 35.0,
+                  fontSize: 25.0,
                   color: Color.fromARGB(255, 255, 255, 255),
                   fontFamily: "Oswald",
                 ),
               )),
+
+//
+// Cerrar sesion
+//
           TextButton.icon(
               onPressed: () {
                 Navigator.push(
@@ -104,11 +126,43 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
               label: Text(
                 "Cerrar Sesión",
                 style: TextStyle(
-                  fontSize: 35.0,
+                  fontSize: 25.0,
                   color: Color.fromARGB(255, 255, 255, 255),
                   fontFamily: "Oswald",
                 ),
               )),
+
+//
+// Slider
+//
+          CarouselSlider(
+            options: CarouselOptions(
+                height: 500,
+                autoPlay: true,
+                viewportFraction: 1,
+                autoPlayInterval: Duration(seconds: 10)),
+            items: [
+              Text(
+                  "Estudia una hora al dia todos los dias para formar un habito de estudio",
+                  style: TextStyle(
+                    fontSize: 12.0,
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    fontFamily: "Oswald",
+                  )),
+              Text("Frase Prueba 1",
+                  style: TextStyle(
+                    fontSize: 12.0,
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    fontFamily: "Oswald",
+                  )),
+              Text("Frase Prueba 1",
+                  style: TextStyle(
+                    fontSize: 12.0,
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    fontFamily: "Oswald",
+                  )),
+            ],
+          )
         ],
       ),
     );

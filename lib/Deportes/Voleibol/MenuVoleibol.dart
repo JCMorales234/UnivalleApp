@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Deportes/Baloncesto/RutinaBaloncesto.dart';
+import 'package:myapp/Deportes/Voleibol/RutinaVoleibol.dart';
 
-class MenuBaloncesto extends StatelessWidget {
-  const MenuBaloncesto({super.key});
+class MenuVoleibol extends StatelessWidget {
+  const MenuVoleibol({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(123, 255, 25, 25),
       appBar: AppBar(
-        title: Text("Baloncesto 🏀"),
+        title: Text("Voleibol 🏐"),
         centerTitle: true,
         backgroundColor: Color.fromARGB(122, 196, 18, 18),
       ),
@@ -20,14 +20,14 @@ class MenuBaloncesto extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                "images/Basquet1.jpeg",
+                "images/Voleibol.jpg",
                 width: 2000.0,
               ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 10.0),
               ),
               Text(
-                "Para jugar baloncesto se requiere de mucha resistencia y fuerza asi que tener las aptitudes fisicas es fundamental para aguantar un partido de baloncesto, Pero ademas es importante tener una buena tecnica y entender los fundamentos del juego.",
+                "El voleibol es un deporte de equipo en el cual es clave realizar los 3 toques disponibles en cada jugada para generar un ataque efectivo al equipo rival por esto es importante que los jugadores tengan una muy buena tecnica que les permita dar pases precisos para completar estos 3 toques. Pero ademas es importante tener un buen estado fisico, el salto y la velocidad son factores claves en este deporte tanto para atacar como para defender.",
                 style: TextStyle(
                   fontSize: 20.0,
                   color: Color.fromARGB(255, 255, 255, 255),
@@ -38,7 +38,7 @@ class MenuBaloncesto extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 10.0),
               ),
               Text(
-                "Teniendo en cuenta todo lo mencionado anteriormente he preparado una rutina basica de entrenamiento de baloncesto 😊",
+                "Teniendo en cuenta todo lo mencionado anteriormente he preparado una rutina basica de entrenamiento de Voleibol 😊",
                 style: TextStyle(
                   fontSize: 20.0,
                   color: Color.fromARGB(255, 255, 255, 255),
@@ -49,7 +49,7 @@ class MenuBaloncesto extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 10.0),
               ),
               Text(
-                "La rutina consta de 3 fases: \n\n Fase 1: Calentamiento \n - Trotar Lentamente por la cancha durante 5 mins \n - Realizar un estiramiento de brazos, piernas, espalda y rodillas \n - 3  ''Suicidios'' \n\n Fase 2: Entrenamiento Principal: \n - dribla el balón, tira a canasta y realiza diversos ejercicios. Esto realmente no tiene una estructura, es simplemente entrar en confianza con la pelota y sentirte despejado física y mentalmente. \n - 30 tiros libres desde diferentes posiciones \n - Dribleo entre conos durante 10 minutos \n - Pases contra la pared 10 minutos \n - Salta la cuerda 10 minutos \n\n Fase 3: Enfriamiento \n - Lanza tiros libres 5 mins \n -Trota lentamente 5 mins \n -Estiramiento de brazos, piernas, espalda y rodillas \n\n Si no sabes como realizar algun ejercicio mencionado anteriormente, pulsa el boton para ver una guia de los ejerccios ",
+                "La rutina consta de 5 fases: \n\n Fase 1: Calentamiento  \n - Realizar un estiramiento de brazos, piernas, rodillas, pies y cuello \n - Trotar lentamente 10 minutos \n\n Fase 2: Preparación fisica: \n -Desplazamientos laterales 10 mins \n - Flexiones 5 series de 8 repeticiones \n - Sentadillas 5 series de 30 repeticiones \n\n  Fase 3: Preparación tecnica \n - Practica tu tecnica de Voleo contra la pared 10 minutos \n - Practica tu tecnica de antebrazo contra la pared 10 mins  \n\n  Fase 4: Entrenamiento de remate y bloqueo \n- Practica los pasos y tecnica de remate sin balon 10 mins \n - Practica los pasos y tecnica de bloqueo 10 mins \n\n Fase 5: Estiramiento \n - Trota suavemente por 5 mins \n - Realizar un estiramiento de brazos, piernas, rodillas, pies y cuello  \n\n Si no sabes como realizar algun ejercicio mencionado anteriormente, pulsa el boton para ver una guia de los ejerccios",
                 style: TextStyle(
                   fontSize: 20.0,
                   color: Color.fromARGB(255, 255, 255, 255),
@@ -64,7 +64,7 @@ class MenuBaloncesto extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => RutinaBaloncesto()));
+                          builder: (context) => RutinaVoleibol()));
                 },
                 style: ButtonStyle(
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(

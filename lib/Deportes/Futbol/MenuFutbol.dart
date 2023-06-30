@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Deportes/Baloncesto/RutinaBaloncesto.dart';
+import 'package:myapp/Deportes/Futbol%20Sala/RutinaFutbolSala.dart';
+import 'package:myapp/Deportes/Futbol/RutinaFutbol.dart';
 
-class MenuBaloncesto extends StatelessWidget {
-  const MenuBaloncesto({super.key});
+class MenuFutbol extends StatelessWidget {
+  const MenuFutbol({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(123, 255, 25, 25),
       appBar: AppBar(
-        title: Text("Baloncesto 🏀"),
+        title: Text("Futbol ⚽"),
         centerTitle: true,
         backgroundColor: Color.fromARGB(122, 196, 18, 18),
       ),
@@ -20,14 +21,14 @@ class MenuBaloncesto extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                "images/Basquet1.jpeg",
+                "images/Futbol.jpg",
                 width: 2000.0,
               ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 10.0),
               ),
               Text(
-                "Para jugar baloncesto se requiere de mucha resistencia y fuerza asi que tener las aptitudes fisicas es fundamental para aguantar un partido de baloncesto, Pero ademas es importante tener una buena tecnica y entender los fundamentos del juego.",
+                "El fútbol es el deporte mas popular del mundo. Solo necesitas un balon y lo puedes jugar en cualquier lugar, pero para jugarlo a un buen nivel se requiere no solo de un buen estado fisico si no tambien de una tecnica con el balon y inteligencia sobre el juego que te hagan destacar sobre los demas jugadores ",
                 style: TextStyle(
                   fontSize: 20.0,
                   color: Color.fromARGB(255, 255, 255, 255),
@@ -38,7 +39,7 @@ class MenuBaloncesto extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 10.0),
               ),
               Text(
-                "Teniendo en cuenta todo lo mencionado anteriormente he preparado una rutina basica de entrenamiento de baloncesto 😊",
+                "Teniendo en cuenta todo lo mencionado anteriormente he preparado una rutina basica de entrenamiento de Futbol 😊",
                 style: TextStyle(
                   fontSize: 20.0,
                   color: Color.fromARGB(255, 255, 255, 255),
@@ -49,7 +50,7 @@ class MenuBaloncesto extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 10.0),
               ),
               Text(
-                "La rutina consta de 3 fases: \n\n Fase 1: Calentamiento \n - Trotar Lentamente por la cancha durante 5 mins \n - Realizar un estiramiento de brazos, piernas, espalda y rodillas \n - 3  ''Suicidios'' \n\n Fase 2: Entrenamiento Principal: \n - dribla el balón, tira a canasta y realiza diversos ejercicios. Esto realmente no tiene una estructura, es simplemente entrar en confianza con la pelota y sentirte despejado física y mentalmente. \n - 30 tiros libres desde diferentes posiciones \n - Dribleo entre conos durante 10 minutos \n - Pases contra la pared 10 minutos \n - Salta la cuerda 10 minutos \n\n Fase 3: Enfriamiento \n - Lanza tiros libres 5 mins \n -Trota lentamente 5 mins \n -Estiramiento de brazos, piernas, espalda y rodillas \n\n Si no sabes como realizar algun ejercicio mencionado anteriormente, pulsa el boton para ver una guia de los ejerccios ",
+                "La rutina consta de 3 fases: \n\n Fase 1: Calentamiento  \n - Realizar un estiramiento de brazos, piernas, rodillas y pies \n - Trotar suavemente 10 minutos \n\n Fase 2: Preparación fisica: \n - Flexiones 5 series de 10 repeticiones \n - Sentadillas 5 series de 25 repeticiones \n - Abdominales 5 series de 25 repeticiones \n -	Pasos de escalera: Pondrás la pelota delante de ti, mientras colocas tu pie encima de la pelota. Después, mueve tu pie abajo, alternando rápido tus pies como si estuvieras subiendo escaleras. 5 mins \n\n  Fase 3: Trabajo tecnico \n - Regatea con el balon entre conos por 5 minutos \n - Realiza pases a la pared apuntando siempre al mismo punto y mientras el balon vuelve a ti realiza elevacion de rodillas 5 mins \n\n  Fase 3: Entrenamiento de control de balon \n\n - Pases de pared: Este ejercicio requiere estar de pie a unos tres metros de la pared. Para empezar, lanza el balón contra la pared haciendo controles de balón con tus pies, devolviéndolo continuamente hasta que no puedas controlarlo más. Realiza esto por 10 mins \n -	Repite el ejercicio anterior usando solo cabezazos \n -	Push-Pull: Pondrás tu pie en el balón y lo moverás desde tu dedo del pie hasta el talón y de nuevo al dedo del pie cambiando de pie rápidamente. 5 mins  \n\n Fase 4: Estiramiento \n - Trota suavemente por 5 mins \n - Realizar un estiramiento de brazos, piernas, rodillas y pies  \n\n Si no sabes como realizar algun ejercicio mencionado anteriormente, pulsa el boton para ver una guia de los ejerccios ",
                 style: TextStyle(
                   fontSize: 20.0,
                   color: Color.fromARGB(255, 255, 255, 255),
@@ -61,10 +62,8 @@ class MenuBaloncesto extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => RutinaBaloncesto()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => RutinaFutbol()));
                 },
                 style: ButtonStyle(
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(

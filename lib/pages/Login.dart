@@ -94,6 +94,12 @@ class _loginState extends State<login> {
                             MaterialPageRoute(
                                 builder: (context) => MenuPrincipal()));
                       },
+                      style: ButtonStyle(
+                          shape:
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.zero,
+                                      side: BorderSide(color: Colors.white)))),
                       child: Text(
                         "Iniciar Sesión",
                         style: TextStyle(
@@ -104,12 +110,22 @@ class _loginState extends State<login> {
                       ),
                     ),
                   ),
+                  Padding(
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 0, vertical: 10.0),
+                  ),
                   SizedBox(
                     child: TextButton(
                       onPressed: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) => SignUp()));
                       },
+                      style: ButtonStyle(
+                          shape:
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.zero,
+                                      side: BorderSide(color: Colors.white)))),
                       child: Text(
                         "Registrarse",
                         style: TextStyle(
