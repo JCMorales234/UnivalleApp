@@ -12,7 +12,7 @@ class login extends StatefulWidget {
 class _loginState extends State<login> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Center(
       child: Scaffold(
         backgroundColor: Color.fromARGB(192, 255, 6, 6),
         body: Container(
@@ -26,7 +26,7 @@ class _loginState extends State<login> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   CircleAvatar(
-                    radius: 100.0,
+                    radius: 80.0,
                     backgroundColor: Color.fromARGB(0, 255, 255, 255),
                     backgroundImage: AssetImage("images/Logo_Univalle.png"),
                   ),
@@ -34,14 +34,14 @@ class _loginState extends State<login> {
                     "UnivalleApp",
                     style: TextStyle(
                         fontFamily: "Oswald",
-                        fontSize: 70.0,
+                        fontSize: 50.0,
                         color: Colors.white),
                   ),
                   Text(
                     "Usuario",
                     style: TextStyle(
                         fontFamily: "Oswald",
-                        fontSize: 40.0,
+                        fontSize: 30.0,
                         color: Colors.white),
                   ),
                   SizedBox(
@@ -53,7 +53,7 @@ class _loginState extends State<login> {
                     enableInteractiveSelection: false,
                     textCapitalization: TextCapitalization.characters,
                     decoration: InputDecoration(
-                        hintText: " Ingrea tu correo electronico registrado",
+                        hintText: " Ingresa tu correo electronico",
                         filled: true,
                         labelText: "Correo electronico",
                         suffixIcon: Icon(Icons.supervised_user_circle),
@@ -65,7 +65,7 @@ class _loginState extends State<login> {
                     "Contraseña",
                     style: TextStyle(
                         fontFamily: "Oswald",
-                        fontSize: 40.0,
+                        fontSize: 30.0,
                         color: Colors.white),
                   ),
                   SizedBox(
@@ -77,7 +77,7 @@ class _loginState extends State<login> {
                     enableInteractiveSelection: false,
                     textCapitalization: TextCapitalization.characters,
                     decoration: InputDecoration(
-                        hintText: " Ingrea tu contraseña",
+                        hintText: " Ingresa tu contraseña",
                         filled: true,
                         labelText: "Contraseña",
                         suffixIcon: Icon(Icons.supervised_user_circle),
@@ -103,7 +103,7 @@ class _loginState extends State<login> {
                       child: Text(
                         "Iniciar Sesión",
                         style: TextStyle(
-                          fontSize: 30.0,
+                          fontSize: 20.0,
                           color: Color.fromARGB(255, 255, 255, 255),
                           fontFamily: "Oswald",
                         ),
@@ -129,7 +129,7 @@ class _loginState extends State<login> {
                       child: Text(
                         "Registrarse",
                         style: TextStyle(
-                          fontSize: 30.0,
+                          fontSize: 20.0,
                           color: Color.fromARGB(255, 255, 255, 255),
                           fontFamily: "Oswald",
                         ),

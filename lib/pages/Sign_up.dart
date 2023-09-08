@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:myapp/pages/Login.dart';
 
@@ -8,10 +10,24 @@ class SignUp extends StatefulWidget {
   State<SignUp> createState() => _SignUpState();
 }
 
+const List<String> list = <String>[
+  'Administración De Empresas',
+  'Construcción',
+  'Contaduría Pública',
+  'Ingeniería De Alimentos',
+  'Ingeniería De Sistemas',
+  'Nutrición Y Dietética',
+  'Tecnología en Alimentos',
+  'Tecnología en Desarrollo De Software',
+  'Tecnología en Electrónica Industrial',
+  'Trabajo Social '
+];
+String dropdownValue = list.first;
+
 class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Center(
       child: Scaffold(
         backgroundColor: Color.fromARGB(192, 255, 6, 6),
         body: Container(
@@ -25,22 +41,26 @@ class _SignUpState extends State<SignUp> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   CircleAvatar(
-                    radius: 100.0,
-                    backgroundColor: Color.fromARGB(0, 65, 20, 20),
+                    radius: 80.0,
+                    backgroundColor: Color.fromARGB(0, 255, 255, 255),
                     backgroundImage: AssetImage("images/Logo_Univalle.png"),
                   ),
                   Text(
-                    "UnivalleApp",
+                    "UnivalleApp \n Registrate ",
                     style: TextStyle(
                         fontFamily: "Oswald",
-                        fontSize: 70.0,
+                        fontSize: 50.0,
                         color: Colors.white),
                   ),
+                  //
+                  // Campo de nombre
+                  //
+                  //
                   Text(
                     "Nombre",
                     style: TextStyle(
                         fontFamily: "Oswald",
-                        fontSize: 40.0,
+                        fontSize: 30.0,
                         color: Colors.white),
                   ),
                   SizedBox(
@@ -52,7 +72,7 @@ class _SignUpState extends State<SignUp> {
                     enableInteractiveSelection: false,
                     textCapitalization: TextCapitalization.characters,
                     decoration: InputDecoration(
-                        hintText: " Ingrea tu Nombre",
+                        hintText: " Ingresa tu nombre",
                         filled: true,
                         labelText: "Nombre",
                         suffixIcon: Icon(Icons.supervised_user_circle),
@@ -60,12 +80,16 @@ class _SignUpState extends State<SignUp> {
                             borderRadius: BorderRadius.circular(20.0)),
                         fillColor: Colors.white),
                   ),
+                  //
+                  // Campo de apellido
+                  //
+                  //
                   Text(
                     "Apellido",
                     style: TextStyle(
                         fontFamily: "Oswald",
-                        fontSize: 40.0,
-                        color: Colors.white),
+                        fontSize: 30.0,
+                        color: Color.fromARGB(255, 255, 255, 255)),
                   ),
                   SizedBox(
                     width: 160.0,
@@ -76,20 +100,23 @@ class _SignUpState extends State<SignUp> {
                     enableInteractiveSelection: false,
                     textCapitalization: TextCapitalization.characters,
                     decoration: InputDecoration(
-                        hintText: " Ingrea tu apellido",
+                        hintText: " Ingresa tu apellido",
                         filled: true,
-                        labelText: "apellido",
+                        labelText: "Apellido",
                         suffixIcon: Icon(Icons.supervised_user_circle),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20.0)),
                         fillColor: Colors.white),
                   ),
-                  Divider(height: 15.0),
+                  //
+                  // Campo de correo
+                  //
+                  //
                   Text(
-                    "Correo electronico",
+                    "Correo Univalle",
                     style: TextStyle(
                         fontFamily: "Oswald",
-                        fontSize: 40.0,
+                        fontSize: 30.0,
                         color: Colors.white),
                   ),
                   SizedBox(
@@ -101,20 +128,52 @@ class _SignUpState extends State<SignUp> {
                     enableInteractiveSelection: false,
                     textCapitalization: TextCapitalization.characters,
                     decoration: InputDecoration(
-                        hintText: " Ingrea tu Correo electronico",
+                        hintText: " Ingresa tu correo electronico",
                         filled: true,
-                        labelText: "Correo electronico",
+                        labelText: "Correo Univalle",
                         suffixIcon: Icon(Icons.supervised_user_circle),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20.0)),
                         fillColor: Colors.white),
                   ),
-                  Divider(height: 15.0),
+                  //
+                  // campo de contrasena
+                  //
+                  Text(
+                    "Contraseña",
+                    style: TextStyle(
+                        fontFamily: "Oswald",
+                        fontSize: 30.0,
+                        color: Colors.white),
+                  ),
+                  SizedBox(
+                    width: 160.0,
+                    height: 15.0,
+                    child: Divider(color: Colors.white),
+                  ),
+                  TextField(
+                    enableInteractiveSelection: false,
+                    textCapitalization: TextCapitalization.characters,
+                    obscureText: true,
+                    decoration: InputDecoration(
+                        hintText: " Ingresa tu contraseña",
+                        filled: true,
+                        labelText: "Contraseña",
+                        suffixIcon: Icon(Icons.supervised_user_circle),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20.0)),
+                        fillColor: Colors.white),
+                  ),
+
+                  //
+                  // Campo de programa academico
+                  //
+                  //
                   Text(
                     "Programa Academico",
                     style: TextStyle(
                         fontFamily: "Oswald",
-                        fontSize: 40.0,
+                        fontSize: 30.0,
                         color: Colors.white),
                   ),
                   SizedBox(
@@ -122,19 +181,46 @@ class _SignUpState extends State<SignUp> {
                     height: 15.0,
                     child: Divider(color: Colors.white),
                   ),
-                  TextField(
-                    enableInteractiveSelection: false,
-                    textCapitalization: TextCapitalization.characters,
-                    decoration: InputDecoration(
-                        hintText: " Ingrea tu Programa Academico",
-                        filled: true,
-                        labelText: "Programa Academico",
-                        suffixIcon: Icon(Icons.supervised_user_circle),
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(20.0)),
-                        fillColor: Colors.white),
+                  //
+                  // boton para campo de de programa academico
+                  //
+                  DropdownButton<String>(
+                    value: dropdownValue,
+                    icon: const Icon(Icons.arrow_downward),
+                    elevation: 16,
+                    style: const TextStyle(
+                        fontFamily: "Oswald",
+                        fontSize: 25.0,
+                        color: Color.fromARGB(255, 0, 0, 0)),
+                    iconSize: 42,
+                    iconEnabledColor: Colors.white,
+                    underline: Container(
+                      height: 2,
+                      color: Color.fromARGB(255, 255, 255, 255),
+                    ),
+                    onChanged: (String? value) {
+                      // This is called when the user selects an item.
+                      setState(() {
+                        dropdownValue = value!;
+                      });
+                    },
+                    items: list.map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
                   ),
-                  Divider(height: 15.0),
+                  //
+                  // separadoor
+                  //
+                  Padding(
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 0, vertical: 10.0),
+                  ),
+                  //
+                  // cooompletar registro
+                  //
                   SizedBox(
                     child: TextButton(
                       onPressed: () {
@@ -148,19 +234,25 @@ class _SignUpState extends State<SignUp> {
                                       borderRadius: BorderRadius.zero,
                                       side: BorderSide(color: Colors.white)))),
                       child: Text(
-                        "Completar registro",
+                        "Completar Registro",
                         style: TextStyle(
-                          fontSize: 30.0,
+                          fontSize: 20.0,
                           color: Color.fromARGB(255, 255, 255, 255),
                           fontFamily: "Oswald",
                         ),
                       ),
                     ),
                   ),
+                  //
+                  // separadoor
+                  //
                   Padding(
                     padding:
                         EdgeInsets.symmetric(horizontal: 0, vertical: 10.0),
                   ),
+                  //
+                  // volver al menu
+                  //
                   SizedBox(
                     child: TextButton(
                       onPressed: () {
@@ -174,9 +266,9 @@ class _SignUpState extends State<SignUp> {
                                       borderRadius: BorderRadius.zero,
                                       side: BorderSide(color: Colors.white)))),
                       child: Text(
-                        "Volver al menu principal",
+                        "Volver",
                         style: TextStyle(
-                          fontSize: 30.0,
+                          fontSize: 20.0,
                           color: Color.fromARGB(255, 255, 255, 255),
                           fontFamily: "Oswald",
                         ),
@@ -185,7 +277,7 @@ class _SignUpState extends State<SignUp> {
                   ),
                 ],
               ),
-            ], // #ToDo Circleavatar en la carpeta widget
+            ],
           ),
         ),
       ),

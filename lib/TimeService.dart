@@ -9,6 +9,8 @@ class TimeService extends ChangeNotifier {
   bool timeplaying = false;
   int rounds = 0;
   int goal = 0;
+  int PM = 0;
+
   String Estado = "Modo Concentración";
 
   void Start() {
@@ -47,7 +49,7 @@ class TimeService extends ChangeNotifier {
   }
 
   void PasarRonda() {
-    if (Estado == "Modo Concentración" && rounds != 3) {
+    if (Estado == "Modo Concentración" && rounds != 3 && PM == 1) {
       Estado = "Descanso";
       CurrentDuration = 300;
       SelectedTime = 300;

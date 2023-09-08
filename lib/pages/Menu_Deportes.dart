@@ -5,7 +5,7 @@ import 'package:myapp/Deportes/Futbol/MenuFutbol.dart';
 import 'package:myapp/Deportes/Natacion/MenuNatacion.dart';
 import 'package:myapp/Deportes/Voleibol/MenuVoleibol.dart';
 import 'package:myapp/iconos_app_icons.dart';
-import 'package:myapp/pages/Calendario_menu.dart';
+import 'package:myapp/Calendario/Calendario_menu.dart';
 import 'package:myapp/pages/Login.dart';
 import 'package:myapp/Deportes/Baloncesto/MenuBaloncesto.dart';
 import 'package:myapp/pages/Menu_Principal.dart';
@@ -44,10 +44,11 @@ class _MenuDeportesState extends State<MenuDeportes> {
               label: Text(
                 "Acondicionamiento Fisico",
                 style: TextStyle(
-                  fontSize: 20.0,
+                  fontSize: 17.0,
                   color: Color.fromARGB(255, 255, 255, 255),
                   fontFamily: "Oswald",
                 ),
+                textAlign: TextAlign.center,
               )),
 //
 // Ajedrez
