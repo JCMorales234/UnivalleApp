@@ -1,18 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/TimeService.dart';
 
-import 'package:myapp/pages/Login.dart';
+import 'package:myapp/src/Estudio/TimeService.dart';
+
+import 'package:myapp/src/entrada_y_registro/Login.dart';
 import 'package:provider/provider.dart';
 
 import 'package:intl/intl.dart';
 import 'package:intl/date_symbol_data_local.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:timezone/timezone.dart' as tz;
+import 'package:timezone/data/latest.dart' as tz;
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+
+  // Establece la configuración regional predeterminada
   Intl.defaultLocale = "es_ES";
-  initializeDateFormatting('es_ES', null);
+  // Inicializa la configuración de fechas para la configuración regional específica
+  await initializeDateFormatting(Intl.defaultLocale, null);
+
+  // Configura la zona horaria
+  tz.initializeTimeZones();
+  tz.setLocalLocation(tz.getLocation('America/New_York'));
   runApp(ChangeNotifierProvider<TimeService>(
     create: (_) => TimeService(),
-    child: MyApp(),
+    child: const MyApp(),
   ));
 }
 
