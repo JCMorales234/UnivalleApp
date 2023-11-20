@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "47017086914",
+    "project_id": "univalleapp",
+    "storage_bucket": "univalleapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47017086914:android:45890a03fc01560cadd05b",
+        "android_client_info": {
+          "package_name": "com.example.myapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhX8ePBxY5P7vzrPb-3950dmf05jJ30yw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
