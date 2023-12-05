@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/src/Calendario/notification_service.dart';
 
 import 'package:myapp/src/Estudio/TimeService.dart';
 
@@ -8,12 +9,16 @@ import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:timezone/timezone.dart' as tz;
+import 'package:permission_handler/permission_handler.dart';
 import 'package:timezone/data/latest.dart' as tz;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await notificationservice.initializeNotification();
+  await Permission.notification.request();
+  await Permission.accessNotificationPolicy.request();
   await Firebase.initializeApp();
+  // Solicita los permisos necesarios
 
   // Establece la configuración regional predeterminada
   Intl.defaultLocale = "es_ES";
@@ -22,7 +27,7 @@ Future<void> main() async {
 
   // Configura la zona horaria
   tz.initializeTimeZones();
-  tz.setLocalLocation(tz.getLocation('America/New_York'));
+
   runApp(ChangeNotifierProvider<TimeService>(
     create: (_) => TimeService(),
     child: const MyApp(),

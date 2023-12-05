@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:myapp/src/entrada_y_registro/Login.dart';
 import 'package:myapp/src/entrada_y_registro/firebase_auth_implementation.dart';
+import 'package:myapp/src/widgets_globales/toast.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
@@ -83,7 +84,6 @@ class _SignUpState extends State<SignUp> {
                     TextFormField(
                       controller: _controladornombre,
                       enableInteractiveSelection: false,
-                      textCapitalization: TextCapitalization.characters,
                       decoration: InputDecoration(
                           hintText: " Ingresa tu nombre",
                           filled: true,
@@ -116,7 +116,6 @@ class _SignUpState extends State<SignUp> {
                     TextFormField(
                       controller: _controladorapellido,
                       enableInteractiveSelection: false,
-                      textCapitalization: TextCapitalization.characters,
                       decoration: InputDecoration(
                           hintText: " Ingresa tu apellido",
                           filled: true,
@@ -131,7 +130,7 @@ class _SignUpState extends State<SignUp> {
                     //    ⬇️⬇️⬇️
                     //
                     const Text(
-                      "Correo Univalle",
+                      "Correo electrónico",
                       style: TextStyle(
                           fontFamily: "Oswald",
                           fontSize: 30.0,
@@ -149,11 +148,10 @@ class _SignUpState extends State<SignUp> {
                     TextFormField(
                       controller: _controladoremail,
                       enableInteractiveSelection: false,
-                      textCapitalization: TextCapitalization.characters,
                       decoration: InputDecoration(
-                          hintText: " Ingresa tu correo electronico",
+                          hintText: " Ingresa tu correo electrónico",
                           filled: true,
-                          labelText: "Correo Univalle",
+                          labelText: "Correo electrónico",
                           suffixIcon: const Icon(Icons.supervised_user_circle),
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20.0)),
@@ -182,7 +180,6 @@ class _SignUpState extends State<SignUp> {
                     TextFormField(
                       controller: _controladorpassword,
                       enableInteractiveSelection: false,
-                      textCapitalization: TextCapitalization.characters,
                       obscureText: true,
                       decoration: InputDecoration(
                           hintText: " Ingresa tu contraseña",
@@ -288,16 +285,40 @@ class _SignUpState extends State<SignUp> {
     User? user =
         await _auth.registarteemailycontrasena(correousuario, passwordusuario);
     await _auth.enviaremaildeverificacion(correousuario);
-    FirebaseFirestore.instance.collection("Usuario").add({
-      "nombre": nombreusuario,
-      "apellido": apellidousuario,
-      "correo": correousuario
-    });
 
     if (user != null) {
-      print("usuario creado de manera correcta");
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => const login()));
+      _mostrarDialogo(context);
+      FirebaseFirestore.instance.collection("Usuario").add({
+        "nombre": nombreusuario,
+        "apellido": apellidousuario,
+        "correo": correousuario
+      });
+    } else {
+      showtoast(
+          mensaje:
+              "Algo Salio mal Revisa que todos los campos esten llenos e intentalo de nuevo");
     }
+  }
+
+  Future<void> _mostrarDialogo(BuildContext context) async {
+    return showDialog<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Verifica tu email'),
+          content: Text(
+              'Revisa tu email en busca del correo de verificación para poder iniciar sesión en la aplicación (suele estar en spam)'),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const login()));
+              },
+              child: Text('Entendido'),
+            ),
+          ],
+        );
+      },
+    );
   }
 }

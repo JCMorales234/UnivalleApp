@@ -1,16 +1,16 @@
 import 'package:appinio_video_player/appinio_video_player.dart';
 import 'package:flutter/material.dart';
 
-class RutinaBaloncesto extends StatefulWidget {
-  const RutinaBaloncesto({super.key});
+class RutinaPingPong extends StatefulWidget {
+  const RutinaPingPong({super.key});
 
   @override
-  State<RutinaBaloncesto> createState() => _RutinaBaloncestoState();
+  State<RutinaPingPong> createState() => _RutinaPingPongState();
 }
 
-class _RutinaBaloncestoState extends State<RutinaBaloncesto> {
+class _RutinaPingPongState extends State<RutinaPingPong> {
   late CustomVideoPlayerController customVideoPlayerController;
-  String Ruta_Video = "images/RutinaBasquetbol.mp4";
+  String Ruta_Video = "images/RutinaPingPong.mp4";
 
   @override
   void initState() {
@@ -30,7 +30,7 @@ class _RutinaBaloncestoState extends State<RutinaBaloncesto> {
         backgroundColor: Color.fromARGB(246, 255, 255, 255),
         appBar: AppBar(
           title: const Text(
-            "Baloncesto 🏀",
+            "Tenis de mesa 🏓",
             style: TextStyle(
               fontSize: 28.0,
               color: Color.fromARGB(255, 255, 255, 255),
@@ -47,7 +47,7 @@ class _RutinaBaloncestoState extends State<RutinaBaloncesto> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
-              "Video de guía rutina de Baloncesto 🏀",
+              "Video de guía rutina de Tenis de mesa 🏓",
               style: TextStyle(
                 fontSize: 28.0,
                 color: Color.fromARGB(255, 0, 0, 0),

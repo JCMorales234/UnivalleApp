@@ -15,9 +15,8 @@ class Boton_Add extends StatelessWidget {
           height: 60,
           alignment: Alignment.center,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            color: const Color.fromARGB(192, 255, 6, 6),
-          ),
+              borderRadius: BorderRadius.circular(20),
+              color: const Color.fromARGB(255, 153, 14, 14)),
           child: Text(
             label,
             style: const TextStyle(

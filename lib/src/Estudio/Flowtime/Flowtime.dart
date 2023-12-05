@@ -17,9 +17,17 @@ class FlowTime extends StatelessWidget {
       child: Scaffold(
         backgroundColor: const Color.fromARGB(123, 255, 25, 25),
         appBar: AppBar(
-          title: const Text("FlowTime"),
+          title: const Text(
+            "FlowTime",
+            style: TextStyle(
+              fontSize: 28.0,
+              color: Color.fromARGB(255, 255, 255, 255),
+              fontFamily: "Oswald",
+            ),
+          ),
+          iconTheme: IconThemeData(color: Colors.white),
           centerTitle: true,
-          backgroundColor: const Color.fromARGB(122, 196, 18, 18),
+          backgroundColor: Color.fromARGB(57, 255, 25, 25),
           actions: [
             IconButton(
                 onPressed: () =>

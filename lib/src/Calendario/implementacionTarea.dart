@@ -20,7 +20,7 @@ class implementacionTarea extends StatelessWidget {
               children: [
                 Text(DateFormat.yMMMMd().format(DateTime.now()),
                     style: const TextStyle(
-                        color: Colors.grey,
+                        color: Color.fromARGB(255, 0, 0, 0),
                         fontFamily: "Oswald",
                         fontSize: 24.0,
                         fontWeight: FontWeight.bold)),

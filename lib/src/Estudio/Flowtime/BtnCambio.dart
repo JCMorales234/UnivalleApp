@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/src/Estudio/TimeService.dart';
 import 'package:provider/provider.dart';
+import "package:myapp/src/Calendario/notification_service.dart";
 
 class BtnCambio extends StatelessWidget {
   const BtnCambio({super.key});
@@ -17,13 +18,21 @@ class BtnCambio extends StatelessWidget {
         height: 100,
         child: Center(
           child: TextButton(
-            onPressed: () {
+            onPressed: () async {
               if (provider.Estado == "Modo Concentración") {
                 provider.Estado = "Tiempo de Descanso";
                 provider.notifyListeners();
+                await notificationservice.shownotification(
+                  title: "UnivalleApp",
+                  body: "Tiempo de Descanso",
+                );
               } else if (provider.Estado == "Tiempo de Descanso") {
                 provider.Estado = "Modo Concentración";
                 provider.notifyListeners();
+                await notificationservice.shownotification(
+                  title: "UnivalleApp",
+                  body: "Modo Concentración",
+                );
               }
             },
             style: ButtonStyle(

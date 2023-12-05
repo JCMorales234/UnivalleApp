@@ -8,6 +8,7 @@ class Progress_Widget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<TimeService>(context);
+
     return Column(
       children: [
         Row(

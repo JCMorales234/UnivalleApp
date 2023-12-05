@@ -3,7 +3,8 @@ import 'package:myapp/src/Deportes/Acondicionamiento%20Fisico/MenuAFisico.dart';
 import 'package:myapp/src/Deportes/Baloncesto/MenuBaloncesto.dart';
 import 'package:myapp/src/Deportes/Futbol%20Sala/MenuFutbolSala.dart';
 import 'package:myapp/src/Deportes/Futbol/MenuFutbol.dart';
-import 'package:myapp/src/Deportes/Natacion/MenuNatacion.dart';
+import 'package:myapp/src/Deportes/Tenis%20de%20mesa/MenuPingPong.dart';
+
 import 'package:myapp/src/Deportes/Voleibol/MenuVoleibol.dart';
 import 'package:myapp/src/Menu%20principal/Menu_Principal.dart';
 
@@ -23,7 +24,7 @@ class _MenuDeportesState extends State<MenuDeportes> {
         crossAxisSpacing: 1,
         mainAxisSpacing: 2,
         crossAxisCount: 2,
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(40),
         children: <Widget>[
 //
 // Acondicionamiento fisico
@@ -41,7 +42,7 @@ class _MenuDeportesState extends State<MenuDeportes> {
                 size: 40.0,
               ),
               label: const Text(
-                "Acondicionamiento Fisico",
+                "Acondicionamiento\nfisico",
                 style: TextStyle(
                   fontSize: 17.0,
                   color: Color.fromARGB(255, 255, 255, 255),
@@ -49,25 +50,6 @@ class _MenuDeportesState extends State<MenuDeportes> {
                 ),
                 textAlign: TextAlign.center,
               )),
-//
-// Ajedrez
-//
-          TextButton.icon(
-              onPressed: () {},
-              icon: const Icon(
-                IconosApp.chess,
-                color: Colors.white,
-                size: 40.0,
-              ),
-              label: const Text(
-                "Ajedrez",
-                style: TextStyle(
-                  fontSize: 25.0,
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  fontFamily: "Oswald",
-                ),
-              )),
-
 //
 // Baloncesto
 //
@@ -86,7 +68,7 @@ class _MenuDeportesState extends State<MenuDeportes> {
               label: const Text(
                 "Baloncesto",
                 style: TextStyle(
-                  fontSize: 25.0,
+                  fontSize: 20.0,
                   color: Color.fromARGB(255, 255, 255, 255),
                   fontFamily: "Oswald",
                 ),
@@ -110,7 +92,7 @@ class _MenuDeportesState extends State<MenuDeportes> {
               label: const Text(
                 "Futbol",
                 style: TextStyle(
-                  fontSize: 25.0,
+                  fontSize: 20.0,
                   color: Color.fromARGB(255, 255, 255, 255),
                   fontFamily: "Oswald",
                 ),
@@ -132,33 +114,9 @@ class _MenuDeportesState extends State<MenuDeportes> {
                 size: 40.0,
               ),
               label: const Text(
-                "Futbol Sala",
+                "Futbol\nsala",
                 style: TextStyle(
-                  fontSize: 25.0,
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  fontFamily: "Oswald",
-                ),
-              )),
-
-//
-// Natacion
-//
-          TextButton.icon(
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const MenuNatacion()));
-              },
-              icon: const Icon(
-                IconosApp.swimming,
-                color: Colors.white,
-                size: 40.0,
-              ),
-              label: const Text(
-                "Natacion",
-                style: TextStyle(
-                  fontSize: 25.0,
+                  fontSize: 20.0,
                   color: Color.fromARGB(255, 255, 255, 255),
                   fontFamily: "Oswald",
                 ),
@@ -168,36 +126,21 @@ class _MenuDeportesState extends State<MenuDeportes> {
 // tenis de mesa
 //
           TextButton.icon(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const MenuPingPong()));
+              },
               icon: const Icon(
                 IconosApp.table_tennis,
                 color: Colors.white,
                 size: 40.0,
               ),
               label: const Text(
-                "Tenis de mesa",
+                "Tenis\nde mesa",
                 style: TextStyle(
-                  fontSize: 25.0,
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  fontFamily: "Oswald",
-                ),
-              )),
-
-//
-// Ultimate
-//
-
-          TextButton.icon(
-              onPressed: () {},
-              icon: const Icon(
-                IconosApp.toys,
-                color: Colors.white,
-                size: 40.0,
-              ),
-              label: const Text(
-                "Ultimate",
-                style: TextStyle(
-                  fontSize: 25.0,
+                  fontSize: 20.0,
                   color: Color.fromARGB(255, 255, 255, 255),
                   fontFamily: "Oswald",
                 ),
@@ -221,7 +164,7 @@ class _MenuDeportesState extends State<MenuDeportes> {
               label: const Text(
                 "Voleibol",
                 style: TextStyle(
-                  fontSize: 25.0,
+                  fontSize: 20.0,
                   color: Color.fromARGB(255, 255, 255, 255),
                   fontFamily: "Oswald",
                 ),
@@ -243,9 +186,9 @@ class _MenuDeportesState extends State<MenuDeportes> {
                 size: 40.0,
               ),
               label: const Text(
-                "Volver al Menu principal",
+                "Volver al\nmenu principal",
                 style: TextStyle(
-                  fontSize: 20.0,
+                  fontSize: 17.0,
                   color: Color.fromARGB(255, 255, 255, 255),
                   fontFamily: "Oswald",
                 ),

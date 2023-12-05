@@ -7,11 +7,19 @@ class MenuBaloncesto extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(123, 255, 25, 25),
+      backgroundColor: Color.fromARGB(246, 255, 255, 255),
       appBar: AppBar(
-        title: const Text("Baloncesto 🏀"),
+        title: const Text(
+          "Baloncesto 🏀",
+          style: TextStyle(
+            fontSize: 28.0,
+            color: Color.fromARGB(255, 255, 255, 255),
+            fontFamily: "Oswald",
+          ),
+        ),
+        iconTheme: IconThemeData(color: Colors.white),
         centerTitle: true,
-        backgroundColor: const Color.fromARGB(122, 196, 18, 18),
+        backgroundColor: const Color.fromARGB(255, 153, 14, 14),
       ),
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 60.0),
@@ -19,40 +27,14 @@ class MenuBaloncesto extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset(
-                "assets/images/Basquet1.jpeg",
-                width: 2000.0,
-              ),
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 10.0),
               ),
               const Text(
-                "Para jugar baloncesto se requiere de mucha resistencia y fuerza asi que tener las aptitudes fisicas es fundamental para aguantar un partido de baloncesto, Pero ademas es importante tener una buena tecnica y entender los fundamentos del juego.",
+                "La rutina consta de 3 fases Calentamiento, Entrenamiento principal y Estiramiento \n\n Fase 1 Calentamiento:\n- Realizar ejercicios de estiramiento para brazos, muñecas, piernas, rodillas y pies \n\nFase 2 Entrenamiento Principal: \n- Realiza 40 tiros desde las zonas de 3 puntos de la cancha. Alterna cada 10 tiros de posición procurando estar siempre en una zona de 3 puntos \n- Saltos de tijera 5 series 40 repeticiones  \n- Realiza 20 tiros libres desde la línea de tiro libre \n- abdominales 5 series 40 repeticiones Toma descansos de 1 minuto entre cada serie \n- Realiza 30 pases a un compañero (o una pared) simulando una situación de juego en la que das un pase lo suficientemente fuerte para evitar que el pase sea interceptado. \n- Salta la cuerda o trotar a una velocidad moderada alrededor de la cancha durante 10 minutos \n\n Fase 3: Enfriamiento: \n- Lanza tiros al aro desde donde te sientas cómodo durante 5 minutos\n- Realizar ejercicios de estiramiento para brazos, muñecas, piernas, rodillas y pies  \n\n Si no sabes como realizar algun ejercicio mencionado anteriormente, pulsa el boton para ver una guia de los ejercios ",
                 style: TextStyle(
                   fontSize: 20.0,
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  fontFamily: "Oswald",
-                ),
-              ),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 10.0),
-              ),
-              const Text(
-                "Teniendo en cuenta todo lo mencionado anteriormente he preparado una rutina basica de entrenamiento de baloncesto 😊",
-                style: TextStyle(
-                  fontSize: 20.0,
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  fontFamily: "Oswald",
-                ),
-              ),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 10.0),
-              ),
-              const Text(
-                "La rutina consta de 3 fases: \n\n Fase 1: Calentamiento \n - Trotar Lentamente por la cancha durante 5 mins \n - Realizar un estiramiento de brazos, piernas, espalda y rodillas \n - 3  ''Suicidios'' \n\n Fase 2: Entrenamiento Principal: \n - dribla el balón, tira a canasta y realiza diversos ejercicios. Esto realmente no tiene una estructura, es simplemente entrar en confianza con la pelota y sentirte despejado física y mentalmente. \n - 30 tiros libres desde diferentes posiciones \n - Dribleo entre conos durante 10 minutos \n - Pases contra la pared 10 minutos \n - Salta la cuerda 10 minutos \n\n Fase 3: Enfriamiento \n - Lanza tiros libres 5 mins \n -Trota lentamente 5 mins \n -Estiramiento de brazos, piernas, espalda y rodillas \n\n Si no sabes como realizar algun ejercicio mencionado anteriormente, pulsa el boton para ver una guia de los ejerccios ",
-                style: TextStyle(
-                  fontSize: 20.0,
-                  color: Color.fromARGB(255, 255, 255, 255),
+                  color: Color.fromARGB(255, 0, 0, 0),
                   fontFamily: "Oswald",
                 ),
               ),
@@ -67,12 +49,17 @@ class MenuBaloncesto extends StatelessWidget {
                           builder: (context) => const RutinaBaloncesto()));
                 },
                 style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(
+                      const Color.fromARGB(255, 153, 14, 14),
+                    ),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        const RoundedRectangleBorder(
-                            borderRadius: BorderRadius.zero,
-                            side: BorderSide(color: Colors.white)))),
+                        RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                            side: const BorderSide(
+                              color: const Color.fromARGB(255, 153, 14, 14),
+                            )))),
                 child: const Text(
-                  "Ejercicios",
+                  "Ver guía",
                   style: TextStyle(
                     fontSize: 25.0,
                     color: Color.fromARGB(255, 255, 255, 255),

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide DatePickerTheme;
 
 class campo_llenar extends StatelessWidget {
   final String titulo;
@@ -30,8 +30,8 @@ class campo_llenar extends StatelessWidget {
             left: 14,
           ),
           decoration: BoxDecoration(
-              border:
-                  Border.all(color: const Color.fromARGB(255, 0, 0, 0), width: 1.0),
+              border: Border.all(
+                  color: const Color.fromARGB(255, 0, 0, 0), width: 1.0),
               borderRadius: BorderRadius.circular(12)),
           child: Row(
             children: [

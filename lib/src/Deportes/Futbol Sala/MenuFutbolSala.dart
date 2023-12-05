@@ -7,11 +7,19 @@ class MenuFutbolSala extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(123, 255, 25, 25),
+      backgroundColor: Color.fromARGB(246, 255, 255, 255),
       appBar: AppBar(
-        title: const Text("Futbol Sala ⚽"),
+        title: const Text(
+          "Fútbol sala ⚽",
+          style: TextStyle(
+            fontSize: 28.0,
+            color: Color.fromARGB(255, 255, 255, 255),
+            fontFamily: "Oswald",
+          ),
+        ),
+        iconTheme: IconThemeData(color: Colors.white),
         centerTitle: true,
-        backgroundColor: const Color.fromARGB(122, 196, 18, 18),
+        backgroundColor: const Color.fromARGB(255, 153, 14, 14),
       ),
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 60.0),
@@ -19,40 +27,14 @@ class MenuFutbolSala extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset(
-                "assets/images/Futbol_Sala.jpg",
-                width: 2000.0,
-              ),
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 10.0),
               ),
               const Text(
-                "El fútbol sala es la versión reducida del fútbol que actualmente está arrasando en el mundo. Ahora reconocido oficialmente por la FIFA y la UEFA, su ritmo rápido y a menudo frenético requiere un conjunto de atributos y habilidades de fútbol sala ligeramente diferentes a las del fútbol de 11 jugadores.",
+                "La rutina consta de 3 fases Calentamiento, Entrenamiento principal y Estiramiento. \n\n Fase 1 Calentamiento: \n- Realizar un estiramiento de brazos, piernas, rodillas y pies  \n- Trotar suavemente 5 minutos  \n\n Fase 2 Entrenamiento Principal: \n- Realiza 3 carreras a máxima velocidad hasta el final de la cancha toma descansos de un minuto entre cada carrera \n- Regatea con el balón entre conos por 5 minutos\n- Flexiones 5 series de 8 repeticiones \n- Realiza dominadas con el balón y cada 4 toques de balón eleva el balón a una buena altura para controlarlo y seguir haciendo las dominadas. Realiza este ejercicio por 3 minutos \n- Sentadillas 5 series de 20 repeticiones \n- Realiza 15 tiros al arco a una distancia en la que te sientas cómodo \n- Abdominales 4 series de 30 repeticiones \n- Realiza 15 tiros al arco con tu pierna menos hábil a una distancia en la que te sientas cómodo\n\n Fase 3: Estiramiento: \n- Trota lentamente 5 minutos \n- Realizar ejercicios de estiramiento para brazos, muñecas, piernas, rodillas y pies  \n\nSi no sabes como realizar algun ejercicio mencionado anteriormente, pulsa el boton para ver una guia de los ejercios ",
                 style: TextStyle(
                   fontSize: 20.0,
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  fontFamily: "Oswald",
-                ),
-              ),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 10.0),
-              ),
-              const Text(
-                "Teniendo en cuenta todo lo mencionado anteriormente he preparado una rutina basica de entrenamiento de Futbol sala 😊",
-                style: TextStyle(
-                  fontSize: 20.0,
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  fontFamily: "Oswald",
-                ),
-              ),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 10.0),
-              ),
-              const Text(
-                "La rutina consta de 4 fases: \n\n Fase 1: Calentamiento  \n - Realizar un estiramiento de brazos, piernas, rodillas y pies \n\n Fase 2: Preparación fisica: \n -Trotar realizando cambios de ritmo por 10 minutos \n - Flexiones 5 series de 8 repeticiones \n - Sentadillas 5 series de 20 repeticiones \n\n  Fase 3: Trabajo tecnico \n - Regatea con el balon entre conos por 5 minutos \n - Realiza pases a la pared apuntando siempre al mismo punto y mientras el balon vuelve a ti realiza elevacion de rodillas 5 mins \n\n  Fase 3: Entrenamiento de tiro y pase \n\n- Realiza tiros libres desde diferentes posiciones hasta que te sientas comodo con tu golpeo \n -	Realiza cinco tiros al arco intentado apuntar uno a cada esquina del arco y un tiro final al centro del arco repitelo hasta que puedas conseguir al menos 3 tiros en el blanco \n -	Utiliza dos conos e intenta dar un pase por el medio de los dos conos realiza esto con los conos a una distancia corta, media y larga de los conos para practicar tu precisión intenta mantener una buena velocidad en cada pase ya que la idea es simular un pase dentro del juego. realiza 5 series de pases a una distancia corta, media y larga \n\n Fase 4: Estiramiento \n - Trota suavemente por 5 mins \n - Realizar un estiramiento de brazos, piernas, rodillas y pies  \n\n Si no sabes como realizar algun ejercicio mencionado anteriormente, pulsa el boton para ver una guia de los ejerccios ",
-                style: TextStyle(
-                  fontSize: 20.0,
-                  color: Color.fromARGB(255, 255, 255, 255),
+                  color: Color.fromARGB(255, 0, 0, 0),
                   fontFamily: "Oswald",
                 ),
               ),
@@ -67,12 +49,17 @@ class MenuFutbolSala extends StatelessWidget {
                           builder: (context) => const RutinaFutbolSala()));
                 },
                 style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(
+                      const Color.fromARGB(255, 153, 14, 14),
+                    ),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        const RoundedRectangleBorder(
-                            borderRadius: BorderRadius.zero,
-                            side: BorderSide(color: Colors.white)))),
+                        RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                            side: const BorderSide(
+                              color: const Color.fromARGB(255, 153, 14, 14),
+                            )))),
                 child: const Text(
-                  "Ejercicios",
+                  "Ver guía",
                   style: TextStyle(
                     fontSize: 25.0,
                     color: Color.fromARGB(255, 255, 255, 255),

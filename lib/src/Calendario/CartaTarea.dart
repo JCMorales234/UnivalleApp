@@ -1,19 +1,16 @@
 import 'package:flutter/material.dart';
 
 class CartaTarea extends StatelessWidget {
-  const CartaTarea(
-      {super.key,
-      required this.titulo,
-      required this.nota,
-      required this.fecha,
-      required this.horainicio,
-      required this.horafin});
+  const CartaTarea({
+    super.key,
+    required this.titulo,
+    required this.nota,
+    required this.fecha,
+  });
 
   final String titulo;
   final String nota;
   final String fecha;
-  final String horainicio;
-  final String horafin;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +21,7 @@ class CartaTarea extends StatelessWidget {
           child: SizedBox(
             height: 100,
             child: Card(
-              color: const Color.fromARGB(255, 240, 75, 75),
+              color: const Color.fromARGB(255, 153, 14, 14),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15)),
               child: Row(
@@ -32,31 +29,20 @@ class CartaTarea extends StatelessWidget {
                   const SizedBox(
                     width: 10,
                   ),
-                  Text(
-                    titulo,
-                    style: const TextStyle(
-                      fontSize: 18.0,
-                      color: Color.fromARGB(255, 255, 255, 255),
-                      fontFamily: "Oswald",
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 20,
-                  ),
                   Expanded(
                     child: Text(
-                      nota,
+                      "$titulo \n $nota",
                       style: const TextStyle(
-                        fontSize: 18.0,
+                        fontSize: 20.0,
                         color: Color.fromARGB(255, 255, 255, 255),
                         fontFamily: "Oswald",
                       ),
                     ),
                   ),
                   Text(
-                    "$fecha \n $horainicio \n $horafin",
+                    fecha,
                     style: const TextStyle(
-                      fontSize: 15.0,
+                      fontSize: 20.0,
                       color: Color.fromARGB(255, 255, 255, 255),
                       fontFamily: "Oswald",
                     ),

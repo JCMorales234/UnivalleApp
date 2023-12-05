@@ -7,11 +7,19 @@ class MenuAfisico extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(123, 255, 25, 25),
+      backgroundColor: Color.fromARGB(246, 255, 255, 255),
       appBar: AppBar(
-        title: const Text("Acondicionamiento fisico 💪"),
+        title: const Text(
+          "Acondicionamiento físico 💪",
+          style: TextStyle(
+            fontSize: 28.0,
+            color: Color.fromARGB(255, 255, 255, 255),
+            fontFamily: "Oswald",
+          ),
+        ),
+        iconTheme: IconThemeData(color: Colors.white),
         centerTitle: true,
-        backgroundColor: const Color.fromARGB(122, 196, 18, 18),
+        backgroundColor: const Color.fromARGB(255, 153, 14, 14),
       ),
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 60.0),
@@ -19,40 +27,14 @@ class MenuAfisico extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset(
-                "assets/images/AFisico.jpg",
-                width: 2000.0,
-              ),
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 10.0),
               ),
               const Text(
-                "Estar en buena forma no solo es importante para los deportes, tener un buen estado fisico nos garantiza evitar problemas de salud y nos genera un sentimiento de bienestar importante para poder afrontar todos los dias con una buena actitud",
+                "La rutina consta de 3 fases Calentamiento, Entrenamiento principal y Estiramiento. Despues de cada serie de un ejercicio descansa 1 minuto \n\n Fase 1 Calentamiento: \n- Realizar ejercicios de estiramiento de brazos, piernas, rodillas, pies y cuello  \n\n Fase 2 Entrenamiento Principal: \n- Saltos de tijera 5 series 40 repeticiones \n- abdominales 5 series 40 repeticiones \n- Elevamiento de rodillas 5 series 40 repeticiones \n- Flexiones 5 series 10 repeticiones \n- Sentadillas 5 series de 40 repeticiones \n- Salta la cuerda o trotar a una velocidad moderada durante 10 minutos \n\n Fase 3: Enfriamiento: \n- Realizar ejercicios de estiramiento para brazos, muñecas, piernas, rodillas y pies  \n\n Si no sabes como realizar algun ejercicio mencionado anteriormente, pulsa el boton para ver una guia de los ejercios ",
                 style: TextStyle(
                   fontSize: 20.0,
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  fontFamily: "Oswald",
-                ),
-              ),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 10.0),
-              ),
-              const Text(
-                "Teniendo en cuenta todo lo mencionado anteriormente he preparado una rutina basica para el Acondicionamiento fisico 😊",
-                style: TextStyle(
-                  fontSize: 20.0,
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  fontFamily: "Oswald",
-                ),
-              ),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 10.0),
-              ),
-              const Text(
-                "La rutina consta de 3 fases: \n\n Fase 1: Calentamiento  \n - Realizar un estiramiento de brazos, piernas, rodillas, pies y cuello \n - Trotar lentamente 5 minutos \n\n Fase 2: Entrenamiento principal \n - Saltos de tijera 5 series de 50 repeticiones \n - abdominales 5 series de 50 repeticiones \n - Elevamiento de rodillas 5 series de 50 repeticiones \n Flexiones 5 series 10 repeticiones \n Salta la cuerda 5 mins  \n\n  Fase 3: Estiramiento \n - Realizar un estiramiento de brazos, piernas, rodillas, pies y cuello \n\n Si no sabes como realizar algun ejercicio mencionado anteriormente, pulsa el boton para ver una guia de los ejerccios ",
-                style: TextStyle(
-                  fontSize: 20.0,
-                  color: Color.fromARGB(255, 255, 255, 255),
+                  color: Color.fromARGB(255, 0, 0, 0),
                   fontFamily: "Oswald",
                 ),
               ),
@@ -67,12 +49,17 @@ class MenuAfisico extends StatelessWidget {
                           builder: (context) => const RutinaAFisico()));
                 },
                 style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(
+                      const Color.fromARGB(255, 153, 14, 14),
+                    ),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        const RoundedRectangleBorder(
-                            borderRadius: BorderRadius.zero,
-                            side: BorderSide(color: Colors.white)))),
+                        RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                            side: const BorderSide(
+                              color: const Color.fromARGB(255, 153, 14, 14),
+                            )))),
                 child: const Text(
-                  "Ejercicios",
+                  "Ver guía",
                   style: TextStyle(
                     fontSize: 25.0,
                     color: Color.fromARGB(255, 255, 255, 255),

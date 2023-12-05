@@ -21,12 +21,12 @@ class Barra_Fechas extends StatelessWidget {
             fontFamily: "Oswald",
             fontSize: 18,
             fontWeight: FontWeight.w600,
-            color: Color.fromARGB(255, 126, 126, 126)),
+            color: Color.fromARGB(255, 0, 0, 0)),
         monthTextStyle: const TextStyle(
             fontFamily: "Oswald",
             fontSize: 20,
             fontWeight: FontWeight.w600,
-            color: Color.fromARGB(255, 126, 126, 126)),
+            color: Color.fromARGB(255, 0, 0, 0)),
         onDateChange: (date) {
           TiempoSeleccionado = date;
         },

@@ -28,35 +28,39 @@ class TimeOptions extends StatelessWidget {
     return SingleChildScrollView(
       controller: ScrollController(initialScrollOffset: 155),
       scrollDirection: Axis.horizontal,
-      child: Row(
-          children: tiempos.map((Time) {
-        return InkWell(
-          onTap: () => provider.SelecTime(double.parse(Time)),
-          child: Container(
-            margin: const EdgeInsets.only(left: 10),
-            width: 70,
-            height: 50,
-            decoration: int.parse(Time) == provider.SelectedTime
-                ? BoxDecoration(
-                    color: Colors.white, borderRadius: BorderRadius.circular(5))
-                : BoxDecoration(
-                    border: Border.all(width: 3, color: Colors.white),
-                    borderRadius: BorderRadius.circular(5)),
-            child: Center(
-              child: Text(
-                (int.parse(Time) ~/ 60).toString(),
-                style: TextStyle(
-                  fontSize: 30.0,
-                  color: int.parse(Time) == provider.SelectedTime
-                      ? const Color.fromARGB(255, 0, 0, 0)
-                      : Colors.white,
-                  fontFamily: "Oswald",
+      child: Visibility(
+        visible: provider.CurrentDuration ~/ 60 == 0 ? true : false,
+        child: Row(
+            children: tiempos.map((Time) {
+          return InkWell(
+            onTap: () => provider.SelecTime(double.parse(Time)),
+            child: Container(
+              margin: const EdgeInsets.only(left: 10),
+              width: 70,
+              height: 50,
+              decoration: int.parse(Time) == provider.SelectedTime
+                  ? BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(5))
+                  : BoxDecoration(
+                      border: Border.all(width: 3, color: Colors.white),
+                      borderRadius: BorderRadius.circular(5)),
+              child: Center(
+                child: Text(
+                  (int.parse(Time) ~/ 60).toString(),
+                  style: TextStyle(
+                    fontSize: 30.0,
+                    color: int.parse(Time) == provider.SelectedTime
+                        ? const Color.fromARGB(255, 0, 0, 0)
+                        : Colors.white,
+                    fontFamily: "Oswald",
+                  ),
                 ),
               ),
             ),
-          ),
-        );
-      }).toList()),
+          );
+        }).toList()),
+      ),
     );
   }
 }
